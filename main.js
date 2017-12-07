@@ -7,7 +7,7 @@ var List = require("./wordlist.js");
 var hangman = {
     wordBank: List.newWord.wordList,
     guessesRemaining: 10,
-    guessedLetters: [];
+    guessedLetters: [],
     display: 0,
     currentWord: null,
 
@@ -63,11 +63,13 @@ var hangman = {
                 }
             }
         }]).then(function(ltr) {
-            var letterReturned = (ltr.chosenLtr).toUpperCase();
+            var letterReturned = (ltr.guessedletter).toUpperCase();
             var guessedAlready = false;
             for(var i = 0; i < that.guessedLetters.length; i++) {
                 if(letterReturned === that.guessedLetters[i]){
                     guessedAlready = true;
+                    console.log("You guessed that letter already.  Try again.");
+                    that.promptUser();
                 }
             }
             if(guessedAlready === false){
@@ -83,7 +85,8 @@ var hangman = {
                     console.log("Letters guessed:", that.guessedLetters);
                 }else {
                     console.log("You guessed right!");
-                    if(that.currentWord.wasTheWordFound() === true){
+                    that.guessesRemaining--;
+                    if(that.currentWord.wasTheWordGuessed() === true){
                         console.log(that.currentWord.wordRender());
                         console.log("Congratulations!");
                     }else{
@@ -98,7 +101,10 @@ var hangman = {
                 }else if(that.guessesRemaining === 0) {
                     console.log("Game over!");
                     console.log("The word ou were guessing was:", that.currentWord.word);
-                }else{
+                }else if(that.currentWord.wasTheWordGuessed() === true){
+                    hangman.startGame();
+                }
+                else{
                     console.log("You guessed that letter alrady.  Try again");
                     that.promptUser();
                 }
@@ -108,4 +114,4 @@ var hangman = {
 
 }
 
-hangaman.startGame();
+hangman.startGame();

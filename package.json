@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/jdgrillone/hangman_node/issues"
   },
-  "homepage": "https://github.com/jdgrillone/hangman_node#readme"
+  "homepage": "https://github.com/jdgrillone/hangman_node#readme",
+  "dependencies": {
+    "inquirer": "^4.0.1",
+    "is-letter": "^1.1.1"
+  }
 }
