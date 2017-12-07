@@ -1,0 +1,19 @@
+{
+  "name": "hangman_node",
+  "version": "1.0.0",
+  "description": "A node based Hangman Game",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jdgrillone/hangman_node.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jdgrillone/hangman_node/issues"
+  },
+  "homepage": "https://github.com/jdgrillone/hangman_node#readme"
+}
