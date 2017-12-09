@@ -33,7 +33,7 @@ var hangman = {
 
     newGame: function() {
         if(this.guessesRemaining === 10) {
-            console.log("Okay, lets start.");
+            console.log("Okay, lets start. The subject is Greek Gods and Goddesses.");
             console.log("=========");
 
             var randNum = Math.floor(Math.random()*this.wordBank.length);

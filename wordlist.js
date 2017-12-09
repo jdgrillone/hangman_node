@@ -1,3 +1,3 @@
 exports.newWord = {
-    wordList:["NINTENDO", "MICROSOFT", "SONY"]
+    wordList:["ZEUS", "HERA", "POSEIDON", "DEMETER", "ARES", "ATHENA", "APOLLO", "ARTEMIS", "APHRODITE", "HERMES"]
 };
